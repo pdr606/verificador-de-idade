@@ -5,7 +5,9 @@ function verificar(){
     var ano = data.getFullYear()
     var res = document.getElementById('res')
 
-    if (yearnasc.value.length == 0 && yasnasc.value > ano ){
+    if (yearnasc.value.length == 0 || yearnasc.value >  ano ){
+        window.alert('[ERROR] Check dados and try again')
+    } else if (yearnasc.value < 1910){
         window.alert('[ERROR] Check dados and try again')
     } else {
         var fsex = document.getElementsByName('sex')
