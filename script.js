@@ -16,17 +16,27 @@ function verificar(){
             genero = 'Homem'
             if (idade >= 0 && idade < 10){
                 img.src = 'foto-bebe-m.png'
-                res.innerHTML = 'pamonha'
-                                
-                
+            } else if ( idade < 21) {
+                img.src = 'foto-jovem-m.png'
+            } else if ( idade < 51) {   
+                img.src = 'foto-adulto-m.png'
+            } else{
+                img.src = 'foto-idoso-m.png'
             }
-        } else if (sexo[1].checked){
+
+        } else if (sexo[1].checked)
             genero = 'Mulher'
-        }
+            if (idade >= 0 && idade < 10){
+                img.src = 'foto-bebe-f.png'
+            } else if ( idade < 21) {
+                img.src = 'foto-jovem-f.png'
+            } else if ( idade < 51) {
+                img.src = 'foto-jovem-f.png'
+            } else{
+                img.src = 'foto-idoso-f.png'
+            }
 
         res.innerHTML = `Detectamos ${genero} com ${idade} anos`
     }
-
-
 
 }
